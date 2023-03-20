@@ -1,19 +1,16 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"log"
-	"os"
 )
 
 func main() {
+	n := 0
 	fmt.Print("Введите целое число: ")
-	scanner := bufio.NewScanner(os.Stdin)
-	scanner.Scan()
-	err := scanner.Err()
+	_, err := fmt.Scan(&n)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("Вы ввели число: %s-\n", scanner.Text())
+	fmt.Printf("Вы ввели число: %d\n", n)
 }
