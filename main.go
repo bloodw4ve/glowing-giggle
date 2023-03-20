@@ -8,12 +8,12 @@ import (
 )
 
 func main() {
-	fmt.Print("Введите целое число: ")
+	fmt.Print("Enter data: ")
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
 	err := scanner.Err()
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("Вы ввели число: %s-\n", scanner.Text())
+	fmt.Printf("Data entered: %s-\n", scanner.Text())
 }
